@@ -17,3 +17,25 @@ int main(){
     updateByRefreance(original);
     cout << original;
 }
+
+
+// PROGRAM 2
+// Acces specifier
+// private
+
+#include <iostream>
+using namespace std;
+
+class BankAccount{
+private:    
+    int balance = 5000;
+    
+public:
+void showbalance(){
+    cout << balance;
+    }
+};
+int main (){
+    BankAccount obj1;
+    obj1.showbalance();
+}
