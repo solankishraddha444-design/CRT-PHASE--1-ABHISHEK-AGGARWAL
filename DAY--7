@@ -1,1 +1,19 @@
+PROGRAM//1
+#include <iostream>
+using namespace std;
 
+void updateByValue(int a){
+    a = 500;
+}
+
+void updateByRefreance(int &a){
+    a = 500;
+}
+
+int main(){
+    int original = 100;
+    updateByValue(original);
+    cout << original << "\n";
+    updateByRefreance(original);
+    cout << original;
+}
