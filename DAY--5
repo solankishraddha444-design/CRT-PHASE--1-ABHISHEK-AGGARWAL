@@ -1,1 +1,121 @@
+//problem--1
+// pattern printing
+#include <iostream>
+using namespace std;
+int main(){
+    //upper triangle
+ 
+  for (int i = 1; i <= 5 ; i++){
+        for(int j = 1;j <= i; j++){
+            cout << "*";
+        }
+       
+    
+        cout <<"\n";
+        }
+        //lower triangle
+        for (int i =5-1; i >=1; i--){
+        for(int j = 1;j <= i;j++){
+            cout << "*";
+        }
+        cout <<"\n";
+        
+        
+           
+    }
+//Program 2
+//Functions with some values and some return values
 
+#include <iostream>
+using namespace std;
+
+int calculateArea( int length, int width){
+    return length * width;
+    
+}
+ int main(){
+     int a =12;
+     int b =10;
+     int area = calculateArea(a,b);
+     cout << area;
+ }   
+    
+//Program 2
+// Types of Functions 
+//program 2.1 -- no arguments ,no return values
+
+#include <iostream>
+using namespace std;
+
+void bellRing(){
+    cout << "Ting Tong..";
+
+}
+int main(){
+    bellRing();
+}
+    
+//program 2.2 -- argument, no Return values
+#include <iostream>
+using namespace std;
+
+void sendMessage(string message){
+    cout << message;
+    
+}
+int main(){
+    sendMessage("BJP wons..");
+}
+
+//program 2.3 -- no agrument , return values
+
+#include<iostream>
+using namespace std;
+
+int ticketNumber(){
+    return 101;
+
+}
+int main (){
+    cout << ticketNumber();
+}
+
+
+//program 2.4 --  agrument , return values
+
+#include<iostream>
+using namespace std;
+
+float convertToDollar(float rupees){
+    return rupees/100;
+
+}
+int main (){
+   float rupees,dollar;
+   cout<<" enter amount of rupees =";
+   cin>> rupees;
+   dollar = convertToDollar(100);
+   cout <<" dollar $ = "<< dollar;
+   
+}
+
+
+//Program -- 3
+//function overloading
+#include <iostream>
+using namespace std;
+int add(int a, int b){
+    return a + b;
+}
+int add (int a, int b , int c){
+    return a + b + c;
+}
+float add(float a,float b, float c, float d){
+    return a + b + c + d;
+}
+int main(){
+    cout << add(5,2)<< "\n";
+    cout << add(5,2 ,3)<<"\n";
+    cout << add(5.0,2.3,5.5,7.5)<<"\n";
+
+}
