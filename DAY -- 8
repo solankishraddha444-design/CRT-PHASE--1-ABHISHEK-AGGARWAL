@@ -87,3 +87,32 @@ int main(){
     b.drive();
 }
 
+
+
+// 1.4-- hierarchical inheritance
+
+#include <iostream>
+using namespace std;
+
+class Parent1{
+public:
+    void paiseDoMummy() {
+        cout << "Mummy paise de do goomne jana hai..." <<"\n";
+    }
+};
+class Parent2 {
+public:
+    void paiseDoPapa() {
+        cout << "papa paise de do books laani hai..." <<"\n";
+    }
+}; 
+
+class child : public Parent1, public Parent2 {
+    //no logic
+};
+int main(){
+    child c;
+    c.paiseDoMummy();
+    c.paiseDoPapa();
+}
+    
