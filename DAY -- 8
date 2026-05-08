@@ -115,4 +115,33 @@ int main(){
     c.paiseDoMummy();
     c.paiseDoPapa();
 }
+
+
+// 1.5-- hierarchical inheritance
+
+#include <iostream>
+using namespace std;
+
+class A {
+public:
+    void print () {
+        cout << "hi there..." <<"\n";
+    }
+};
+
+class B : virtual public A {
+    // no logic
+};
+
+class C : virtual public A {
+    // no logic
+};
+
+class D : public B , public C {
+    // NO logic
+};
+int main(){
+    D obj1;
+    obj1.print();
     
+}
