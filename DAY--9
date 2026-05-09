@@ -64,3 +64,28 @@ int main() {
         cout << arr[i] << "";
     }
 }
+
+
+
+// PROBLEM -- 3
+// linear search
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {10,20,30,40,50};
+    int searchElement;
+    
+    cout <<"Enter element to search" <<"\n";
+    cin >> searchElement;
+    
+    for(int i= 0 ; i < 5; i++){
+        if(arr[i] = searchElement){
+            cout << "Element found at index" << i;
+            return 0;
+        }
+    }
+    
+    cout << "Element not found.." ;
+    
+}
