@@ -1,0 +1,44 @@
+// problem --1
+// function name --- same parameters -- different classes
+
+#include <iostream>
+using namespace std;
+
+class Appliance {
+public:    
+    virtual void turnOn() {
+        cout << " Appliance is getting turn on.." <<"\n";
+    }
+     virtual void work() = 0;
+};
+
+class Fan : public Appliance {
+public:    
+    void turnOn() override {
+        cout << "Fan blades are moving slowly.." <<"\n";
+    }
+public:    
+    void work() override {
+        cout << "Once fan starts at full speed it gives cool air.." << "\n";
+    }
+};
+class Toaster : public Appliance {
+public:    
+    void work() override {
+        cout << "Toaster is heating up the breads..." <<"\n";
+        
+    }
+};
+
+int main() {
+    Fan myfan;
+    Appliance* kitchenApp;
+    kitchenApp=&myfan;
+    kitchenApp->turnOn();
+    kitchenApp->work();
+    
+    Toaster myToast;
+    kitchenApp =&myToast;
+    kitchenApp->turnOn();
+    kitchenApp->work();
+}
