@@ -1,0 +1,24 @@
+// PROBLEM 1
+// MAKING 2D ARRAY
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[2][2];
+    
+    for(int i = 0; i <=2; i++){
+        for(int j = 0; j <2; j++) {
+            cin >> arr[i][j];
+        }
+    }
+    
+    cout <<"here is your 2 Day array" << "\n";
+    for(int i = 0; i <2; i++) {
+        for(int j = 0; j <2; j++) {
+            cout << arr[i][j] << " ";        
+    }
+    cout << "\n";
+    }
+    return 0;
+}
