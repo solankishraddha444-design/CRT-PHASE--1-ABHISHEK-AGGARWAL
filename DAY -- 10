@@ -42,3 +42,28 @@ int main() {
     }
     cout << sum;
 }
+
+
+// PROBLEM 3
+// SUM OF ELEMENTS OF 2D ARRAY
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[2][2] = { {10,20},
+                    {30,40} };
+    int searchElement;
+    cin >> searchElement;
+    
+    for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            if(arr[i][j] == searchElement){
+                cout << i << " " << j;
+                return 0;
+            }
+            
+        }
+    }
+    cout << "element not found..";
+}
